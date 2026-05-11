@@ -15,6 +15,8 @@ public class AnneesBissextiles {
     // les tests un par un. Commencez par un simple modulo 4, puis
     // ajoutez les exceptions à chaque fois qu'un nouveau test échoue.
     boolean bissextile = false;
+
+    if ((annee % 400 == 0) || ((annee % 4 == 0) && (annee % 100 != 0))) bissextile = true;
     return bissextile;
   }
 }

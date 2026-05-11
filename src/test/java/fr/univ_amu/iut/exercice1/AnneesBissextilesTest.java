@@ -2,7 +2,6 @@ package fr.univ_amu.iut.exercice1;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -27,19 +26,16 @@ class AnneesBissextilesTest {
 
   // ========= Tests 1 à 3 : poser le terrain =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2021_n_est_pas_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(2021)).isFalse();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2023_n_est_pas_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(2023)).isFalse();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2025_n_est_pas_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(2025)).isFalse();
@@ -47,19 +43,16 @@ class AnneesBissextilesTest {
 
   // ========= Tests 4 à 6 : introduction de la règle "divisible par 4" =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2020_est_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(2020)).isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2024_est_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(2024)).isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2028_est_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(2028)).isTrue();
@@ -67,13 +60,11 @@ class AnneesBissextilesTest {
 
   // ========= Tests 7 à 8 : régression, années divisibles par 4 dans d'autres siècles =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_1996_est_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(1996)).isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_1804_est_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(1804)).isTrue();
@@ -81,14 +72,12 @@ class AnneesBissextilesTest {
 
   // ========= Tests 9 à 10 : exception "divisible par 100" =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_1900_n_est_pas_bissextile() {
     // 1900 est divisible par 4 ET par 100 : l'exception de 100 l'emporte.
     assertThat(AnneesBissextiles.estBissextile(1900)).isFalse();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_1700_n_est_pas_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(1700)).isFalse();
@@ -96,14 +85,12 @@ class AnneesBissextilesTest {
 
   // ========= Tests 11 à 12 : exception de l'exception "divisible par 400" =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2000_est_bissextile() {
     // 2000 est divisible par 4, par 100 ET par 400 : la règle 400 l'emporte.
     assertThat(AnneesBissextiles.estBissextile(2000)).isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_1600_est_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(1600)).isTrue();
@@ -111,13 +98,11 @@ class AnneesBissextilesTest {
 
   // ========= Tests 13 à 14 : régression, cas plus éloignés =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2100_n_est_pas_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(2100)).isFalse();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void l_annee_2400_est_bissextile() {
     assertThat(AnneesBissextiles.estBissextile(2400)).isTrue();
