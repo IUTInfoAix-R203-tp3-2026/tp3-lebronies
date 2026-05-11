@@ -32,7 +32,6 @@ class JeuDeTennisTest {
 
   // ========= Score initial =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void le_score_initial_est_0_0() {
     assertThat(jeu.getScore()).isEqualTo("0-0");
@@ -40,14 +39,12 @@ class JeuDeTennisTest {
 
   // ========= Points simples d'Alice =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_un_point_d_alice_le_score_est_15_0() {
     jeu.marquerPoint("Alice");
     assertThat(jeu.getScore()).isEqualTo("15-0");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_deux_points_d_alice_le_score_est_30_0() {
     jeu.marquerPoint("Alice");
@@ -55,7 +52,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("30-0");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_trois_points_d_alice_le_score_est_40_0() {
     for (int i = 0; i < 3; i++) jeu.marquerPoint("Alice");
@@ -64,14 +60,12 @@ class JeuDeTennisTest {
 
   // ========= Points simples de Bob =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_un_point_de_bob_le_score_est_0_15() {
     jeu.marquerPoint("Bob");
     assertThat(jeu.getScore()).isEqualTo("0-15");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_deux_points_de_bob_le_score_est_0_30() {
     jeu.marquerPoint("Bob");
@@ -79,7 +73,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("0-30");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_trois_points_de_bob_le_score_est_0_40() {
     for (int i = 0; i < 3; i++) jeu.marquerPoint("Bob");
@@ -88,7 +81,6 @@ class JeuDeTennisTest {
 
   // ========= Mélanges, pour exercer la matrice =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_un_point_chacun_le_score_est_15_15() {
     jeu.marquerPoint("Alice");
@@ -96,7 +88,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("15-15");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_deux_points_d_alice_et_un_point_de_bob_le_score_est_30_15() {
     jeu.marquerPoint("Alice");
@@ -105,7 +96,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("30-15");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_trois_points_d_alice_et_un_point_de_bob_le_score_est_40_15() {
     for (int i = 0; i < 3; i++) jeu.marquerPoint("Alice");
@@ -113,7 +103,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("40-15");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_trois_points_d_alice_et_deux_points_de_bob_le_score_est_40_30() {
     for (int i = 0; i < 3; i++) jeu.marquerPoint("Alice");
@@ -121,7 +110,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("40-30");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_deux_points_chacun_le_score_est_30_30() {
     for (int i = 0; i < 2; i++) jeu.marquerPoint("Alice");
@@ -131,7 +119,6 @@ class JeuDeTennisTest {
 
   // ========= Deuce =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_trois_points_chacun_le_score_est_egalite() {
     for (int i = 0; i < 3; i++) {
@@ -143,7 +130,6 @@ class JeuDeTennisTest {
 
   // ========= Advantage =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_egalite_et_un_point_d_alice_le_score_est_avantage_alice() {
     for (int i = 0; i < 3; i++) {
@@ -154,7 +140,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("Avantage Alice");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_egalite_et_un_point_de_bob_le_score_est_avantage_bob() {
     for (int i = 0; i < 3; i++) {
@@ -165,7 +150,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("Avantage Bob");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_avantage_alice_et_un_point_de_bob_le_score_revient_a_egalite() {
     for (int i = 0; i < 3; i++) {
@@ -179,7 +163,6 @@ class JeuDeTennisTest {
 
   // ========= Win =========
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_avantage_alice_et_un_point_d_alice_alice_a_gagne() {
     for (int i = 0; i < 3; i++) {
@@ -191,7 +174,6 @@ class JeuDeTennisTest {
     assertThat(jeu.getScore()).isEqualTo("Jeu pour Alice");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void apres_quatre_points_d_alice_alice_a_gagne() {
     for (int i = 0; i < 4; i++) jeu.marquerPoint("Alice");
