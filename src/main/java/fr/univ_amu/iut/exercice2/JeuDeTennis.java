@@ -52,6 +52,10 @@ public class JeuDeTennis {
       score = "Avantage Alice";
     } else if ((points1 < points2) && (points1 >= 40)) {
       score = "Avantage Bob";
+    } else if (points2 >= 50) {
+      score = "Jeu pour Bob";
+    } else if (points1 >= 50) {
+      score = "Jeu pour Alice";
     } else {
       score = points1 + "-" + points2;
     }
